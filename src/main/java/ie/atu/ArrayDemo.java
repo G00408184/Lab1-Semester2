@@ -1,9 +1,10 @@
 package ie.atu;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
     public static void main(String[] args) {
         int [] anArray;
-
         anArray = new int[10];
 
         anArray[0] = 100;
@@ -28,7 +29,19 @@ public class ArrayDemo {
         System.out.println("Element at index 8:" + anArray[8]);
         System.out.println("Element at index 9:" + anArray[9]);
 
+       try {
+           System.out.println("please enter number");
+           Scanner input = new Scanner(System.in);
+           anArray[10] = input.nextInt();
+           System.out.println(+ anArray[10]);
+       }
+       catch (ArrayIndexOutOfBoundsException e)
+       {
+           System.out.println("Array is out of bounds");
+       }
+
     }
 
 
 }
+
