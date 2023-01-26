@@ -1,10 +1,15 @@
 package ie.atu;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
     public static void main(String[] args) {
         int [] anArray;
-
         anArray = new int[10];
+        System.out.println("please enter number");
+        Scanner input = new Scanner(System.in);
+        anArray[10] = input.nextInt();
+        System.out.println(+ anArray[10]);
 
         anArray[0] = 100;
         anArray[1] = 200;
