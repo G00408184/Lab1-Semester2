@@ -1,10 +1,18 @@
 package ie.atu;
 
+import java.util.Scanner;
+
 public class ArrayDemo {
 
     public static void main(String[] args) {
 
-        int[] anArray = new int[10];
+        int [] anArray;
+        anArray = new int[10];
+        System.out.println("please enter number");
+        Scanner input = new Scanner(System.in);
+        anArray[10] = input.nextInt();
+        System.out.println(+ anArray[10]);
+
 
         anArray[0] = 100;
         anArray[1] = 200;
@@ -23,7 +31,19 @@ public class ArrayDemo {
             indexvalue++;
         }
 
+       try {
+           System.out.println("please enter number");
+           Scanner input = new Scanner(System.in);
+           anArray[10] = input.nextInt();
+           System.out.println(+ anArray[10]);
+       }
+       catch (ArrayIndexOutOfBoundsException e)
+       {
+           System.out.println("Array is out of bounds");
+       }
+
     }
 
 
 }
+
